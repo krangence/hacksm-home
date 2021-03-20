@@ -16,6 +16,10 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    injector:
+      image:
+        repository: "hashicorp/vault-k8s"
+        tag: "0.9.0"
     server:
       dataStorage:
         enabled: true
