@@ -19,7 +19,7 @@ spec:
     server:
       dataStorage:
         enabled: true
-        storageClass: hcloud-volumes
+        storageClass: openebs-hostpath
       extraEnvironmentVars:
         GOOGLE_APPLICATION_CREDENTIALS: /vault/userconfig/kms-vault/account.json
       extraVolumes:

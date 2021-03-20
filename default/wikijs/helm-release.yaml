@@ -47,7 +47,7 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: hcloud-volumes
+        storageClass: openebs-hostpath
       data:
         enabled: true
-        existingClaim: cifs-data-pvc
+        existingClaim: nfs-data-pvc
