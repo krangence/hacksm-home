@@ -33,6 +33,7 @@ spec:
         force-ssl-redirect: "false"
       use-forwarded-headers: "true"
       service:
+        loadBalancerIP: 10.0.3.150
         externalTrafficPolicy: Local
       #metrics:
       #  enabled: true

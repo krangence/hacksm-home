@@ -17,11 +17,16 @@ spec:
       interval: 5m
   values:
     configInline:
+      peers:
+      - peer-address: 10.0.0.1
+        peer-asn: 64512
+        my-asn: 64512
       address-pools:
-        - name: default
-          protocol: layer2
-          addresses:
-          - 10.0.1.250/32
+      - name: bgp
+        protocol: bgp
+        addresses:
+        -  10.0.3.0/24
+        avoid-buggy-ips: true
    # prometheusRule:
    #   enabled: true
    # prometheus:
