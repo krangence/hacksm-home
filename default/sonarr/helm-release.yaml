@@ -21,19 +21,19 @@ spec:
       repository: ghcr.io/k8s-at-home/sonarr
       tag: v3.0.5.1143
     env:
-      TZ: "America/New_York"
+      TZ: "Europe/London"
     ingress:
       enabled: true
       annotations:
         kubernetes.io/ingress.class: "nginx"
       hosts:
-      - host: sonarr.eviljungle.com
+      - host: sonarr.robotwizard.co.uk
         paths:
         - path: /
           pathType: Prefix
       tls:
       - hosts:
-        - "sonarr.eviljungle.com"
+        - "sonarr.robotwizard.co.uk"
     podAnnotations:
       backup.velero.io/backup-volumes: config
     persistence:
