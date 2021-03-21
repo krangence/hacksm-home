@@ -16,6 +16,8 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    image:
+      tag: "dev@sha256:0ad6df3c1246f5163daef67842703ef02bc38bd96c5e54e9f4d242304ee4d7bd"
     replicaCount: 1
     deploymentStrategy:
       type: Recreate
