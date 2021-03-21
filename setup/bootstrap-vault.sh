@@ -169,20 +169,17 @@ loadSecretsToVault() {
   message "writing secrets to vault"
   #vault kv put secrets/flux-system/discord-webhook address="$DISCORD_FLUX_WEBHOOK_URL"
   vault kv put secrets/cert-manager/route53-credentials aws-secret-access-key="$R53_SECRET_ACCESS_KEY"
-  vault kv put secrets/kube-system/cifs username="$HETZNER_STORAGE_BOX_USERNAME" password="$HETZNER_STORAGE_BOX_PASSWORD"
   vault kv put secrets/flux-system/discord-webhook address="$DISCORD_FLUX_WEBHOOK_URL"
 
   ####################
   # helm chart values
   #################### 
-  kvault "default/ghost/helm-values.txt"
   kvault "default/minio/helm-values.txt"
   kvault "kube-system/external-dns/helm-values.txt"
   kvault "kube-system/oauth2-proxy/helm-values.txt"
-  kvault "monitoring/grafana/helm-values.txt"
-  kvault "monitoring/kube-prometheus-stack/helm-values.txt"
-  kvault "monitoring/thanos/helm-values.txt"
-  kvault "monitoring/uptimerobot/uptimerobot-helm-values.txt"
+  #kvault "monitoring/grafana/helm-values.txt"
+  #kvault "monitoring/kube-prometheus-stack/helm-values.txt"
+  #kvault "monitoring/thanos/helm-values.txt"
   kvault "velero/velero/helm-values.txt"
 }
 
