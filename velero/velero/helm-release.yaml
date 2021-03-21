@@ -34,9 +34,9 @@ spec:
         config:
           region: us-east-1
       resticTimeout: 6h
-    initContainers:
-    - name: velero-plugin-for-aws
-      image: velero/velero-plugin-for-aws:v1.1.0
+    initContainers: 
+    - name: velero-plugin-aws
+      image: raspbernetes/velero-aws-plugin:v1.0.1
       imagePullPolicy: IfNotPresent
       volumeMounts:
       - mountPath: /target
