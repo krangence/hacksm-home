@@ -24,8 +24,8 @@ spec:
       interval: 5m
   values:
     image:
-      repository: quay.io/thanos/thanos
-      tag: v0.18.0
+      repository: raspbernetes/thanos
+      tag: v0.17.2
     query:
       replicaCount: 2
       replicaLabels:
