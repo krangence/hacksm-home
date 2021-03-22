@@ -47,7 +47,7 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: openebs-hostpath
+        existingClaim: nfs-media-pvc
       data:
         enabled: true
         existingClaim: nfs-data-pvc

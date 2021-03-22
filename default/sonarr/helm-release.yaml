@@ -39,11 +39,10 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: openebs-hostpath
-        size: 2Gi
+        existingClaim: nfs-data-pvc
       media:
         enabled: true
-        existingClaim: nfs-data-pvc
+        existingClaim: nfs-media-pvc
     podSecurityContext:
       runAsUser: 1001
       runAsGroup: 1001
