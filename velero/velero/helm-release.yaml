@@ -36,7 +36,7 @@ spec:
       resticTimeout: 6h
     initContainers: 
     - name: velero-plugin-aws
-      image: raspbernetes/velero-aws-plugin:v1.0.1
+      image: raspbernetes/velero-aws-plugin:v1.1.0
       imagePullPolicy: IfNotPresent
       volumeMounts:
       - mountPath: /target
