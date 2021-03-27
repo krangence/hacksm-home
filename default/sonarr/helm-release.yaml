@@ -46,9 +46,11 @@ spec:
       config:
         enabled: true
         existingClaim: nfs-data-pvc
+        subPath: sonarr
       media:
         enabled: true
         existingClaim: nfs-media-pvc
+        subPath: sonarr
     podSecurityContext:
       runAsUser: 1001
       runAsGroup: 1001
@@ -62,3 +64,23 @@ spec:
     tolerations:
     - key: "arm"
       operator: "Exists"
+    additionalContainers:
+    - name: youtubedl
+      image: cwlf/sonarr_youtubedl:main
+      imagePullPolicy: Always
+      volumeMounts:
+      - name: config
+        mountPath: /config
+      - name: media
+        mountPath: /sonarr_root
+      - name: config
+        mountPath: /logs
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: kubernetes.io/hostname
+                  operator: In
+                  values:
+                    - k3s-r64-0
