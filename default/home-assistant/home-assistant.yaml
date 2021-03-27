@@ -94,5 +94,5 @@ spec:
       enabled: true
       persistence:
         enabled: true
-        existingClaim: nfs-data-pv
+        existingClaim: nfs-data-pvc
         subPath: home-assistant

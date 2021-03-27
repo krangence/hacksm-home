@@ -42,7 +42,7 @@ spec:
     persistence:
       data:
         enabled: true
-        existingClaim: nfs-data-pv
+        existingClaim: nfs-data-pvc
         subPath: node-red
     podAnnotations:
       backup.velero.io/backup-volumes: data

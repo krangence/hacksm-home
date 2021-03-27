@@ -40,7 +40,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: nfs-data-pv
+        existingClaim: nfs-data-pvc
         subPath: homer
     podAnnotations:
       backup.velero.io/backup-volumes: config
