@@ -19,7 +19,7 @@ spec:
     injector:
       image:
         repository: "hashicorp/vault-k8s"
-        tag: "0.9.0"
+        tag: "0.10.0"
     server:
       dataStorage:
         enabled: true
