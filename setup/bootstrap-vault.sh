@@ -177,9 +177,9 @@ loadSecretsToVault() {
   kvault "default/minio/helm-values.txt"
   kvault "kube-system/external-dns/helm-values.txt"
   kvault "kube-system/oauth2-proxy/helm-values.txt"
-  #kvault "monitoring/grafana/helm-values.txt"
-  #kvault "monitoring/kube-prometheus-stack/helm-values.txt"
-  #kvault "monitoring/thanos/helm-values.txt"
+  kvault "monitoring/grafana/helm-values.txt"
+  kvault "monitoring/kube-prometheus-stack/helm-values.txt"
+  kvault "monitoring/thanos/helm-values.txt"
   kvault "velero/velero/helm-values.txt"
 }
 
