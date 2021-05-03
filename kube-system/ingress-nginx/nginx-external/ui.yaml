@@ -2,29 +2,29 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: zeus
+  name: ui
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: zeus.robotwizard.co.uk
+  - host: ui.robotwizard.co.uk
     http:
       paths:
       - path: /
         backend:
-            serviceName: zeus
-            servicePort: 2353
+            serviceName: ui
+            servicePort: 80
   tls:
   - hosts:
-    - zeus.robotwizard.co.uk
+    - ui.robotwizard.co.uk
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: zeus
+  name: ui
 spec:
   ports:
   - name: http
-    port: 2353
+    port: 80
   type: ExternalName
-  externalName: 10.0.1.19
+  externalName: 10.0.1.14
